@@ -143,7 +143,7 @@ class Grafo:
 # PARTE 1: Distâncias e Caminhos
 # ==========================
 arquivo = input("---MANIPULAÇÃO DE GRAFOS-- \n Insira o nome do arquivo do grafo desejado: ")
-repr = eval(input("--REPRESENTAÇÃO ESCOLHIDA-- \n\n1-matriz \n2-lista"))
+repr = eval(input("--REPRESENTAÇÃO ESCOLHIDA-- \n\n1-matriz \n2-lista\n\n"))
 if repr==1:
     grafo = Grafo(arquivo, representacao='matriz')
 else:
@@ -198,4 +198,5 @@ df_tempos = pd.DataFrame([
 
 print("\n==================== Tempos de execução ====================")
 print(df_tempos.to_string(index=False))
+
 
