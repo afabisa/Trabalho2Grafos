@@ -142,8 +142,12 @@ class Grafo:
 # ==========================
 # PARTE 1: Distâncias e Caminhos
 # ==========================
-arquivo = "grafo_W_1.txt"  # nome do seu arquivo .txt
-grafo = Grafo(arquivo, representacao='lista')
+arquivo = input("---MANIPULAÇÃO DE GRAFOS-- \n Insira o nome do arquivo do grafo desejado: ")
+repr = eval(input("--REPRESENTAÇÃO ESCOLHIDA-- \n\n1-matriz \n2-lista"))
+if repr==1:
+    grafo = Grafo(arquivo, representacao='matriz')
+else:
+    grafo = Grafo(arquivo, representacao='lista')
 
 origem = 10
 alvos = [20, 30, 40, 50, 60]
@@ -194,3 +198,4 @@ df_tempos = pd.DataFrame([
 
 print("\n==================== Tempos de execução ====================")
 print(df_tempos.to_string(index=False))
+
